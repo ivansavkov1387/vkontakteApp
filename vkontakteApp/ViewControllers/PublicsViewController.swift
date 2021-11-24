@@ -10,6 +10,7 @@ import UIKit
 class PublicsViewController: UITableViewController {
     
     let cellID = "cell"
+    let items = ["1", "2", "3", "4", "5"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +22,18 @@ class PublicsViewController: UITableViewController {
 
 extension PublicsViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        
+        cell.textLabel?.text = items[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let publicVC = PublicViewController()
+        navigationController?.pushViewController(publicVC, animated: true)
     }
     
 }

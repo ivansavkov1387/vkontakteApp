@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PublicTableViewController: UITableViewController {
+class PublicViewController: UITableViewController {
     
     private let cellID = "cell"
     
@@ -20,7 +20,12 @@ class PublicTableViewController: UITableViewController {
     
 }
     
-    extension PublicTableViewController {
+    extension PublicViewController {
+        
+        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+            return cell
+        }
         
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return 1
