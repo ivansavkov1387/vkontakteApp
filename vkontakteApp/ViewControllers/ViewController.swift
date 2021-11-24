@@ -12,12 +12,9 @@ class ViewController: UIViewController {
     private let vkontakteLabel: UILabel = {
         let label = UILabel()
         label.text = "VK"
-        label.font = UIFont.boldSystemFont(ofSize: 48)
+        label.font = UIFont.init(name: "HelveticaNeue-Bold", size: 54)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        label.layer.borderWidth = 1
-        label.layer.borderColor = UIColor.red.cgColor
         
         return label
     }()
@@ -26,11 +23,9 @@ class ViewController: UIViewController {
         let textfield = UITextField()
         textfield.placeholder = "Enter login"
         textfield.borderStyle = .roundedRect
+        textfield.layer.cornerRadius = 10
         textfield.delegate = self
         textfield.translatesAutoresizingMaskIntoConstraints = false
-        
-        textfield.layer.borderWidth = 1
-        textfield.layer.borderColor = UIColor.red.cgColor
         
         return textfield
     }()
@@ -39,11 +34,9 @@ class ViewController: UIViewController {
         let textfield = UITextField()
         textfield.placeholder = "Enter password"
         textfield.borderStyle = .roundedRect
+        textfield.layer.cornerRadius = 10
         textfield.delegate = self
         textfield.translatesAutoresizingMaskIntoConstraints = false
-        
-        textfield.layer.borderWidth = 1
-        textfield.layer.borderColor = UIColor.red.cgColor
         
         return textfield
     }()
@@ -52,11 +45,10 @@ class ViewController: UIViewController {
         let button = UIButton()
         button.backgroundColor = .white
         button.setTitleColor(#colorLiteral(red: 0.0007253905642, green: 0.4668268561, blue: 0.9992229342, alpha: 1), for: .normal)
-        button.setTitle("Log in", for: .normal)
+        button.setTitle("Login", for: .normal)
+        button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
-        
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.red.cgColor
+        button.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
         
         return button
     }()
@@ -75,6 +67,12 @@ class ViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         layout()
+    }
+    
+    @objc private func loginPressed() {
+        let tabBarVC = TabBarController()
+        tabBarVC.modalPresentationStyle = .fullScreen
+        present(tabBarVC, animated: true, completion: nil)
     }
     
         
