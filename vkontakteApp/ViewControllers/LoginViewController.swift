@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     private let vkontakteLabel: UILabel = {
         let label = UILabel()
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         
 }
 
-extension ViewController {
+extension LoginViewController {
     
     private func addingSubviews() {
         view.backgroundColor = #colorLiteral(red: 0.0007253905642, green: 0.4668268561, blue: 0.9992229342, alpha: 1)
@@ -110,7 +110,7 @@ extension ViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     
     internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if loginTF.isFirstResponder {
@@ -122,7 +122,7 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-extension ViewController {
+extension LoginViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

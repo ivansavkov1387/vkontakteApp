@@ -10,16 +10,19 @@ import UIKit
 class FriendsViewController: UITableViewController {
     
     let cellID = "cell"
-    let items = ["1", "2", "3", "4", "5"]
+    var friends = [Friend]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
-        tableView.delegate = self
-        tableView.dataSource = self
+        createFriendsArray()
+        tableView.register(FriendsCell.self, forCellReuseIdentifier: cellID)
         
-        
+    }
+    
+    private func createFriendsArray() {
+        friends.append(Friend(name: "Bob", image: "friend1"))
+        friends.append(Friend(name: "Helen", image: "friend2"))
     }
     
         
@@ -27,20 +30,25 @@ class FriendsViewController: UITableViewController {
 
 extension FriendsViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return friends.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell.textLabel?.text = items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! FriendsCell
+        cell.friend = friends[indexPath.row]
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let friendVC = FriendViewController(collectionViewLayout: UICollectionViewLayout())
+        
+        let friendVC = FriendViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        friendVC.friend = friends[indexPath.row]
         navigationController?.pushViewController(friendVC, animated: true)
     }
+    
+
 }
 
 

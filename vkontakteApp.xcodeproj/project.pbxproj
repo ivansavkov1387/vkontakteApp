@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		B41A79452747A7DE008D47C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41A79442747A7DE008D47C3 /* AppDelegate.swift */; };
 		B41A79472747A7DE008D47C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41A79462747A7DE008D47C3 /* SceneDelegate.swift */; };
-		B41A79492747A7DE008D47C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41A79482747A7DE008D47C3 /* ViewController.swift */; };
+		B41A79492747A7DE008D47C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41A79482747A7DE008D47C3 /* LoginViewController.swift */; };
 		B41A794E2747A7E2008D47C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41A794D2747A7E2008D47C3 /* Assets.xcassets */; };
 		B41A79512747A7E2008D47C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41A794F2747A7E2008D47C3 /* LaunchScreen.storyboard */; };
+		B49958DA2752CDDA006D2D0D /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49958D92752CDDA006D2D0D /* FriendsCell.swift */; };
+		B49958DF2752CE19006D2D0D /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49958DE2752CE19006D2D0D /* FriendCell.swift */; };
+		B49958E42752D60F006D2D0D /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49958E32752D60F006D2D0D /* FriendModel.swift */; };
 		B4B2923D274D129B0078EFEC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B2923C274D129B0078EFEC /* TabBarController.swift */; };
 		B4B29240274D15630078EFEC /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B2923F274D15630078EFEC /* FriendsViewController.swift */; };
 		B4B29244274D71D30078EFEC /* PublicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B29243274D71D30078EFEC /* PublicsViewController.swift */; };
@@ -23,10 +26,13 @@
 		B41A79412747A7DE008D47C3 /* vkontakteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkontakteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41A79442747A7DE008D47C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B41A79462747A7DE008D47C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B41A79482747A7DE008D47C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B41A79482747A7DE008D47C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B41A794D2747A7E2008D47C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B41A79502747A7E2008D47C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B41A79522747A7E2008D47C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49958D92752CDDA006D2D0D /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
+		B49958DE2752CE19006D2D0D /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		B49958E32752D60F006D2D0D /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		B4B2923C274D129B0078EFEC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B4B2923F274D15630078EFEC /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		B4B29243274D71D30078EFEC /* PublicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicsViewController.swift; sourceTree = "<group>"; };
@@ -74,15 +80,50 @@
 			path = vkontakteApp;
 			sourceTree = "<group>";
 		};
+		B49958D42752CD50006D2D0D /* PublicsViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4B29243274D71D30078EFEC /* PublicsViewController.swift */,
+				B4B29249274E3C920078EFEC /* PublicViewController.swift */,
+			);
+			path = PublicsViewControllers;
+			sourceTree = "<group>";
+		};
+		B49958D52752CD6C006D2D0D /* FriendsViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B49958DC2752CDE3006D2D0D /* FriendsViewController */,
+				B49958E12752CE20006D2D0D /* FriendViewController */,
+			);
+			path = FriendsViewControllers;
+			sourceTree = "<group>";
+		};
+		B49958DC2752CDE3006D2D0D /* FriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B4B2923F274D15630078EFEC /* FriendsViewController.swift */,
+				B49958D92752CDDA006D2D0D /* FriendsCell.swift */,
+				B49958E32752D60F006D2D0D /* FriendModel.swift */,
+			);
+			path = FriendsViewController;
+			sourceTree = "<group>";
+		};
+		B49958E12752CE20006D2D0D /* FriendViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B4B29246274D793F0078EFEC /* FriendViewController.swift */,
+				B49958DE2752CE19006D2D0D /* FriendCell.swift */,
+			);
+			path = FriendViewController;
+			sourceTree = "<group>";
+		};
 		B4B2924C274E3CDE0078EFEC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B41A79482747A7DE008D47C3 /* ViewController.swift */,
+				B41A79482747A7DE008D47C3 /* LoginViewController.swift */,
 				B4B2923C274D129B0078EFEC /* TabBarController.swift */,
-				B4B29243274D71D30078EFEC /* PublicsViewController.swift */,
-				B4B29249274E3C920078EFEC /* PublicViewController.swift */,
-				B4B2923F274D15630078EFEC /* FriendsViewController.swift */,
-				B4B29246274D793F0078EFEC /* FriendViewController.swift */,
+				B49958D42752CD50006D2D0D /* PublicsViewControllers */,
+				B49958D52752CD6C006D2D0D /* FriendsViewControllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -156,14 +197,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49958E42752D60F006D2D0D /* FriendModel.swift in Sources */,
 				B4B2924A274E3C930078EFEC /* PublicViewController.swift in Sources */,
-				B41A79492747A7DE008D47C3 /* ViewController.swift in Sources */,
+				B49958DA2752CDDA006D2D0D /* FriendsCell.swift in Sources */,
+				B41A79492747A7DE008D47C3 /* LoginViewController.swift in Sources */,
 				B4B29240274D15630078EFEC /* FriendsViewController.swift in Sources */,
 				B4B2923D274D129B0078EFEC /* TabBarController.swift in Sources */,
 				B4B29247274D79400078EFEC /* FriendViewController.swift in Sources */,
 				B41A79452747A7DE008D47C3 /* AppDelegate.swift in Sources */,
 				B41A79472747A7DE008D47C3 /* SceneDelegate.swift in Sources */,
 				B4B29244274D71D30078EFEC /* PublicsViewController.swift in Sources */,
+				B49958DF2752CE19006D2D0D /* FriendCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
