@@ -21,13 +21,14 @@ class FriendCell: UICollectionViewCell {
     private let friendImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
-        
+                
         return image
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = #colorLiteral(red: 1, green: 0.09326624756, blue: 0.0197128029, alpha: 1)
         addSubviews()
         layout()
     }
@@ -44,11 +45,10 @@ extension FriendCell {
     
     func layout() {
         
-        friendImage.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        friendImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
-        friendImage.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        friendImage.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        
+        friendImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5).isActive = true
+        friendImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5).isActive = true
+        friendImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5).isActive = true
+        friendImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5).isActive = true
     }
 
 }

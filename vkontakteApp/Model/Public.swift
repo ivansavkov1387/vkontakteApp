@@ -1,18 +1,20 @@
 //
-//  FriendModel.swift
+//  Public.swift
 //  vkontakteApp
 //
-//  Created by Иван on 11/28/21.
+//  Created by Иван on 11/29/21.
 //
 
 import Foundation
 
-struct Friend {
-    let name: String?
-    let image: String?
-    
+struct Public: Equatable {
+    let name: String
+    let image: String
+
     init(name: String, image: String) {
         self.name = name
         self.image = image
     }
+    
+    
 }
